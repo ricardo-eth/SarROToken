@@ -104,7 +104,8 @@ describe('SarROToken', function () {
     });
 
     it('Should increase the recipient balance', async function () {
-      expect(await sarROToken.balanceOf(alice.address)).to.equal(TOTAL_SUPPLY.div(ethers.BigNumber.from('2'))); // equivaut .div(2)
+      expect(await sarROToken.balanceOf(alice.address)).to.equal(TOTAL_SUPPLY.div(ethers.BigNumber.from('2')));
+      // equivaut .div(2)
     });
 
     it('Should revert if sender have not enough allowances', async function () {
@@ -140,7 +141,8 @@ describe('SarROToken', function () {
     });
 
     it('Should increase the total supply', async function () {
-      expect(await sarROToken.totalSupply()).to.equal(TOTAL_SUPPLY.mul(2)); //.above(TOTAL_SUPPLY)
+      expect(await sarROToken.totalSupply()).to.equal(TOTAL_SUPPLY.mul(2));
+      // .above(TOTAL_SUPPLY)
     });
 
     it('Should revert if the sender is not the owner', async function () {
